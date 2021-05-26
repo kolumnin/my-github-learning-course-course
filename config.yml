@@ -1,0 +1,16 @@
+title: 'My GitHub learning course '
+description: Regular course for learning about GitHub repositories
+template:
+  repo: my-github-learning-course-template
+  name: my-github-learning-course
+before:
+  - type: createIssue
+    title: Welcome!
+    body: new-issue.md
+steps:
+  - title: First step
+    description: The first step in your course
+    event: issues.assigned
+    link: '{{ repoUrl }}'
+    actions:
+      - type: closeIssue
